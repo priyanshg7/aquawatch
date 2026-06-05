@@ -1,0 +1,211 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.cardHeader h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.icon {
+  color: var(--primary-color);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.cardBody strong {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.addBtn, .addBtnLarge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.addBtn:hover, .addBtnLarge:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.addBtnLarge {
+  padding: 14px 24px;
+  font-size: 1rem;
+  margin-top: 16px;
+}
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--danger);
+  margin-top: auto;
+  padding: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: rgba(239, 68, 68, 0.05);
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.deleteBtn:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 64px 24px;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.emptyState h2 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.emptyState p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  padding: 24px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.inputGroup input, .inputGroup select {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--surface-color-light);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.inputGroup input:focus, .inputGroup select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.cancelBtn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: background 0.2s, color 0.2s;
+}
+
+.cancelBtn:hover {
+  background: var(--surface-color-light);
+  color: var(--text-main);
+}
+
+.loadingState {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+}

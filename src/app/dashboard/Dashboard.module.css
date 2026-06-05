@@ -1,0 +1,316 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.demoBanner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--primary-color);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.lastUpdated {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.statusBadge[data-online="true"] {
+  color: var(--success);
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.05);
+}
+.statusBadge[data-online="true"] .dot {
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+
+.statusBadge[data-online="false"] {
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.05);
+}
+.statusBadge[data-online="false"] .dot {
+  background: var(--danger);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.controls {
+  background: var(--surface-color);
+  padding: 20px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  min-width: 250px;
+}
+
+.controls h3 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 8px;
+  background: var(--surface-color-light);
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.ctrlBtn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.ctrlBtn:hover {
+  background: var(--surface-color);
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.activeOn {
+  background: var(--success) !important;
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3) !important;
+}
+
+.activeOff {
+  background: var(--danger) !important;
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3) !important;
+}
+
+.activeAuto {
+  background: var(--primary-color) !important;
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3) !important;
+}
+
+.offlineWarning {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--danger);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+}
+
+.alertsCard {
+  border: 1px solid var(--warning);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.alertsTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: var(--warning);
+  font-weight: 600;
+}
+
+.alertsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alertsList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b45309;
+  font-weight: 500;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.tankCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tankWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.estimatedTime {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: var(--primary-color);
+  font-weight: 600;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.metricCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metricInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.metricValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.recentActivity {
+  margin-top: 8px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.activityTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activityTable th, .activityTable td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.activityTable th {
+  background: var(--surface-color-light);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.activityTable tr:last-child td {
+  border-bottom: none;
+}
+
+.activityTable tr:hover td {
+  background: var(--surface-color-light);
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  background: var(--surface-color-light);
+  border-radius: 12px;
+}

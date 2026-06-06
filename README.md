@@ -12,24 +12,7 @@ The AquaWatch Next.js application has been successfully deployed to Vercel (comp
 * **Production Deployment URL**: [https://aquawatch-iota.vercel.app](https://aquawatch-iota.vercel.app)
 * **Alternative URL**: [https://aquawatch-7si911r5j-priyanshgupta739-5175s-projects.vercel.app](https://aquawatch-7si911r5j-priyanshgupta739-5175s-projects.vercel.app)
 
-### What was Accomplished
 
-#### 1. Fixed TypeScript Build Error
-* **File**: [route.ts](file:///c:/Users/priya/Desktop/AquaWatch/src/app/api/telemetry/route.ts)
-* **Fix**: Added `enableAveraging` to the properties destructured from `device` at line 112. Previously, it was used on line 126 without being destructured, causing typecheck compilation to fail.
-
-#### 2. Environment Variables Configuration on Vercel
-We added the following environment variables to the Vercel project scope for the Production environment:
-* `MONGODB_URI`: Connects the serverless functions to the MongoDB Atlas cluster database.
-* `NEXTAUTH_SECRET`: Used by NextAuth to sign and encrypt session cookies.
-* `NEXTAUTH_URL`: Configured to the canonical production URL `https://aquawatch-iota.vercel.app` so authentication redirects function correctly.
-
-#### 3. Vercel Production Build & Deployment
-* Ran `npm install -g vercel` to update the local Vercel CLI.
-* Linked the local project to a new Vercel project named `aquawatch`.
-* Triggered production deployments and verified that the builds succeed.
-
----
 
 ## Getting Started
 
